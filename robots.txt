@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brcclinic.in/sitemap.xml
+
+Disallow: /404.html

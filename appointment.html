@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment – BRC Clinic Gurugram | +91 93116 42999</title>
+  <meta name="description" content="Book an appointment at BRC Clinic Gurugram. Call +91 93116 42999 or WhatsApp. Online booking form available. Open all 7 days. Home visit available."/>
+  <link rel="canonical" href="https://brcclinic.in/appointment.html"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .appt-hero-options { display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:3rem 0; }
+    .aopt { background:var(--white);border:2px solid var(--border);border-radius:var(--r-lg);padding:2rem;text-align:center;transition:var(--transition);cursor:pointer; }
+    .aopt:hover,.aopt.selected { border-color:var(--primary);background:var(--primary-pale);transform:translateY(-3px); }
+    .aopt-icon { font-size:2.5rem;margin-bottom:0.75rem; }
+    .aopt h3 { font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.3rem; }
+    .aopt p { font-size:0.82rem;color:var(--text-mid); }
+    .full-form { background:var(--white);border-radius:var(--r-xl);padding:3rem;box-shadow:var(--shadow-xl);border:1px solid var(--border);max-width:700px;margin:0 auto; }
+    .steps { display:flex;gap:0;margin-bottom:2.5rem;position:relative; }
+    .steps::before { content:'';position:absolute;top:18px;left:0;right:0;height:2px;background:var(--border);z-index:0; }
+    .step { flex:1;text-align:center;position:relative;z-index:1; }
+    .step-num { width:36px;height:36px;border-radius:50%;background:var(--border);color:var(--text-light);font-family:'Outfit',sans-serif;font-weight:700;font-size:0.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto 0.4rem; }
+    .step.active .step-num { background:var(--primary);color:var(--white); }
+    .step.done .step-num { background:var(--accent);color:var(--white); }
+    .step-label { font-size:0.72rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:0.5px; }
+    .step.active .step-label { color:var(--primary); }
+    .quick-contact { display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:2rem; }
+    .qc-card { padding:1.25rem;background:var(--cream);border-radius:var(--r-md);border:1px solid var(--border);text-align:center;transition:var(--transition); }
+    .qc-card:hover { border-color:var(--secondary);transform:translateY(-2px); }
+    .qc-card a { text-decoration:none; }
+    .qc-icon { font-size:2rem;margin-bottom:0.5rem; }
+    .qc-title { font-family:'Outfit',sans-serif;font-weight:700;font-size:0.9rem;color:var(--text); }
+    .qc-val { font-size:0.82rem;color:var(--primary);font-weight:600; }
+    @media(max-width:768px){.appt-hero-options{grid-template-columns:1fr;}.full-form{padding:2rem 1.25rem;}.steps{gap:0;}}
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-progress"></div>
+<div id="loading-screen"><div class="loading-logo">BRC <span>Clinic</span></div><div class="loading-bar-wrap"><div class="loading-bar"></div></div><p class="loading-text">Loading Appointment...</p></div>
+<div id="cookie-bar"><p>🍪 We use cookies. <a href="privacy-policy.html">Learn more</a></p><div class="cookie-btns"><button class="btn-cookie-accept" id="cookieAccept">Accept</button><button class="btn-cookie-decline" id="cookieDecline">Decline</button></div></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">B</div><div class="nav-logo-text">BRC <span>Clinic</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="blog.html">Blog</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-actions"><button class="btn-lang" id="langToggle">हिं / EN</button><button class="btn-theme" id="themeToggle">🌙</button><a href="appointment.html" class="btn-nav-cta" style="background:var(--gold);">📅 Book Now</a></div>
+    <div id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div id="menu-overlay"></div>
+<div id="mobile-menu"><div class="mobile-menu-links"><a href="index.html">🏠 Home</a><a href="about.html">👩‍⚕️ About</a><a href="services.html">💊 Services</a><a href="conditions.html">🩺 Conditions</a><a href="appointment.html">📅 Book Appointment</a><a href="contact.html">📞 Contact</a></div></div>
+
+<div class="page-hero" style="background:linear-gradient(135deg,#C9815A 0%,#C9963A 100%);">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Book Appointment</span></div>
+  <h1>📅 Book an <span style="color:var(--gold-light)">Appointment</span></h1>
+  <p>Take the first step towards a pain-free, healthier life. Choose how you'd like to book below.</p>
+</div>
+
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+
+    <!-- QUICK CONTACT OPTIONS -->
+    <div class="text-center reveal"><div class="section-label">Instant Connect</div><h2 class="section-title">Choose How to <span class="accent">Book</span></h2></div>
+    <div class="appt-hero-options">
+      <div class="aopt reveal" onclick="document.getElementById('bookingForm').scrollIntoView({behavior:'smooth'})">
+        <div class="aopt-icon">📝</div>
+        <h3>Online Form</h3>
+        <p>Fill the form below — we'll call you back within 30 minutes during clinic hours.</p>
+      </div>
+      <div class="aopt reveal" style="transition-delay:.15s" onclick="window.open('https://wa.me/919311642999?text=Hello%20BRC%20Clinic!%20I%20would%20like%20to%20book%20an%20appointment.','_blank')">
+        <div class="aopt-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <p>Fastest response. Message us directly on WhatsApp for instant appointment confirmation.</p>
+      </div>
+      <div class="aopt reveal" style="transition-delay:.3s" onclick="window.location.href='tel:+919311642999'">
+        <div class="aopt-icon">📞</div>
+        <h3>Call Us</h3>
+        <p>Speak directly with our team. Call +91 93116 42999 or +91 70500 02000.</p>
+      </div>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div id="bookingForm">
+      <div class="full-form reveal">
+        <div class="steps">
+          <div class="step active"><div class="step-num">1</div><div class="step-label">Your Info</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-label">Condition</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-label">Confirm</div></div>
+        </div>
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:var(--text);margin-bottom:0.5rem;">📅 Book Your Appointment</h3>
+        <p style="font-size:0.875rem;color:var(--text-mid);margin-bottom:2rem;">All fields marked with * are required. We treat all information with complete confidentiality.</p>
+        <form id="mainApptForm" onsubmit="submitMainForm(event)">
+          <div class="form-grid-2">
+            <div class="form-group"><label for="mFirst">First Name *</label><input type="text" id="mFirst" placeholder="First name" required/></div>
+            <div class="form-group"><label for="mLast">Last Name *</label><input type="text" id="mLast" placeholder="Last name" required/></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group"><label for="mPhone">Phone / WhatsApp *</label><input type="tel" id="mPhone" placeholder="+91 XXXXX XXXXX" required/></div>
+            <div class="form-group"><label for="mEmail">Email Address</label><input type="email" id="mEmail" placeholder="your@email.com"/></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group"><label for="mAge">Age</label><input type="number" id="mAge" placeholder="e.g. 35" min="1" max="120"/></div>
+            <div class="form-group"><label for="mGender">Gender</label><select id="mGender"><option value="">Select...</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+          </div>
+          <div class="form-group">
+            <label for="mService">Primary Concern / Service Needed *</label>
+            <select id="mService" required>
+              <option value="">Select your main concern...</option>
+              <optgroup label="Pain & Spine">
+                <option>Back Pain / Disc Problem / Sciatica</option>
+                <option>Neck Pain / Cervical Spondylitis</option>
+                <option>Knee Pain / Hip Pain</option>
+                <option>Frozen Shoulder</option>
+                <option>Arthritis</option>
+                <option>Sports Injury</option>
+              </optgroup>
+              <optgroup label="Therapies">
+                <option>Acupuncture</option>
+                <option>Physiotherapy / Rehab</option>
+                <option>Naturopathy / Yoga</option>
+                <option>Fire Cupping / Gua Sha</option>
+                <option>Neurotherapy</option>
+                <option>Hypnotherapy</option>
+              </optgroup>
+              <optgroup label="Health Conditions">
+                <option>Fertility / IVF Support</option>
+                <option>PCOD / PCOS</option>
+                <option>Stroke / Paralysis Rehab</option>
+                <option>Recovery from Coma</option>
+                <option>Diabetes / BP / Thyroid</option>
+                <option>Weight Management</option>
+                <option>Insomnia / Stress / Anxiety</option>
+                <option>Tinnitus / Hearing Loss</option>
+                <option>Auto-Immune Disease</option>
+                <option>Gut Health / IBS</option>
+              </optgroup>
+              <optgroup label="Special Programs">
+                <option>Avoid Surgery Program</option>
+                <option>Post-Surgery Rehabilitation</option>
+                <option>Biofeedback Diagnosis</option>
+                <option>Home Visit Request</option>
+              </optgroup>
+              <option>Other (Please specify in message)</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="mDuration">How long have you had this problem?</label><select id="mDuration"><option value="">Select...</option><option>Less than 1 month</option><option>1–3 months</option><option>3–6 months</option><option>6–12 months</option><option>1–3 years</option><option>More than 3 years</option></select></div>
+          <div class="form-group"><label for="mPrev">Previous Treatments (if any)</label><input type="text" id="mPrev" placeholder="e.g. Physiotherapy, Surgery, Medicines..."/></div>
+          <div class="form-group"><label for="mMessage">Describe Your Condition *</label><textarea id="mMessage" rows="4" placeholder="Please describe your symptoms, pain level, affected areas and any other relevant information..." required></textarea></div>
+          <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <label style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;background:var(--cream);border-radius:var(--r-sm);cursor:pointer;font-size:0.875rem;">
+              <input type="checkbox" id="mHomeVisit" style="width:auto;cursor:pointer;"/> <span>I need a <strong>Home Visit</strong></span>
+            </label>
+            <label style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;background:var(--cream);border-radius:var(--r-sm);cursor:pointer;font-size:0.875rem;">
+              <input type="checkbox" id="mFirstTime" style="width:auto;cursor:pointer;" checked/> <span>This is my <strong>First Visit</strong></span>
+            </label>
+          </div>
+          <button type="submit" class="btn-submit" style="font-size:1.05rem;">📅 Confirm Appointment Request →</button>
+          <p style="text-align:center;font-size:0.78rem;color:var(--text-light);margin-top:0.75rem;">Your message will be sent via WhatsApp for fastest response. We'll call you back within 30 minutes.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- WHY BOOK WITH US -->
+    <div style="margin-top:4rem;" class="reveal">
+      <div class="text-center"><div class="section-label">Why Choose Us</div><h2 class="section-title">What to <span class="accent">Expect</span></h2></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem;margin-top:2rem;">
+        <div class="stat-box"><div class="stat-icon">⚡</div><div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.25rem;">30-Min Callback</div><p style="font-size:0.85rem;color:var(--text-mid);">We respond to every inquiry within 30 minutes during clinic hours.</p></div>
+        <div class="stat-box"><div class="stat-icon">🎯</div><div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.25rem;">Personalized Plan</div><p style="font-size:0.85rem;color:var(--text-mid);">Every patient gets a customized treatment plan based on their unique condition.</p></div>
+        <div class="stat-box"><div class="stat-icon">🔒</div><div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.25rem;">100% Confidential</div><p style="font-size:0.85rem;color:var(--text-mid);">Your health information is completely private and secure with us.</p></div>
+        <div class="stat-box"><div class="stat-icon">🏡</div><div style="font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.25rem;">Home Visits</div><p style="font-size:0.85rem;color:var(--text-mid);">Can't come to us? We'll come to you anywhere in Gurugram.</p></div>
+      </div>
+    </div>
+
+    <!-- QUICK CONTACT -->
+    <div style="margin-top:3rem;">
+      <div class="text-center reveal"><h3 style="font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);">Or Reach Us Directly</h3></div>
+      <div class="quick-contact">
+        <a href="tel:+919311642999" class="qc-card reveal"><div class="qc-icon">📞</div><div class="qc-title">Phone (Primary)</div><div class="qc-val">+91 93116 42999</div></a>
+        <a href="tel:+917050002000" class="qc-card reveal" style="transition-delay:.1s"><div class="qc-icon">📞</div><div class="qc-title">Phone (Secondary)</div><div class="qc-val">+91 70500 02000</div></a>
+        <a href="https://wa.me/919311642999" target="_blank" class="qc-card reveal" style="transition-delay:.2s"><div class="qc-icon">💬</div><div class="qc-title">WhatsApp</div><div class="qc-val">+91 93116 42999</div></a>
+        <a href="mailto:ceo@aarogita.com" class="qc-card reveal" style="transition-delay:.3s"><div class="qc-icon">✉️</div><div class="qc-title">Email</div><div class="qc-val">ceo@aarogita.com</div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">BRC <span>Clinic</span></div><p class="footer-desc">Book your appointment today. Open all 7 days. Home visits available.</p><div class="footer-social"><a href="https://instagram.com/biophysiotherapy" target="_blank" class="social-icon">📸</a><a href="https://wa.me/919311642999" target="_blank" class="social-icon">💬</a><a href="tel:+919311642999" class="social-icon">📞</a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919311642999">📞 +91 93116 42999</a></li><li><a href="tel:+917050002000">📞 +91 70500 02000</a></li><li><a href="mailto:ceo@aarogita.com">✉️ ceo@aarogita.com</a></li><li><a href="#">📍 342P, Basement, near Medicity, Sector 38, Gurugram</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms & Conditions</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 BRC Clinic – Pain, Spine & Joint Rehab. All rights reserved. | 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</p></div>
+</footer>
+
+<a href="https://wa.me/919311642999" target="_blank" id="whatsapp-btn">💬</a>
+<a href="tel:+919311642999" id="call-btn">📞</a>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div id="toast"></div>
+<script src="js/main.js"></script>
+<script>
+function submitMainForm(e){
+  e.preventDefault();
+  const first=document.getElementById('mFirst').value;
+  const last=document.getElementById('mLast').value;
+  const phone=document.getElementById('mPhone').value;
+  const service=document.getElementById('mService').value;
+  const duration=document.getElementById('mDuration').value||'Not specified';
+  const prev=document.getElementById('mPrev').value||'None';
+  const msg=document.getElementById('mMessage').value;
+  const home=document.getElementById('mHomeVisit').checked;
+  const first_time=document.getElementById('mFirstTime').checked;
+  const wa=encodeURIComponent(`🏥 BRC Clinic Appointment Request\n\nName: ${first} ${last}\nPhone: ${phone}\nService: ${service}\nProblem Duration: ${duration}\nPrev. Treatment: ${prev}\nHome Visit: ${home?'Yes':'No'}\nFirst Visit: ${first_time?'Yes':'No'}\n\nDescription: ${msg}`);
+  window.open(`https://wa.me/919311642999?text=${wa}`,'_blank');
+  document.querySelectorAll('.step')[0].classList.remove('active');
+  document.querySelectorAll('.step')[0].classList.add('done');
+  document.querySelectorAll('.step')[1].classList.add('done');
+  document.querySelectorAll('.step')[2].classList.add('active');
+  const t=document.getElementById('toast');
+  if(t){t.textContent='✅ Appointment request sent via WhatsApp! We will call you back shortly.';t.style.transform='translateX(-50%) translateY(0)';setTimeout(()=>t.style.transform='translateX(-50%) translateY(80px)',5000);}
+  e.target.reset();
+}
+</script>
+</body>
+</html>

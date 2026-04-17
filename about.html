@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Dr. Arpita Shefali – BRC Clinic Gurugram | 15+ Years Experience</title>
+  <meta name="description" content="Meet Dr. Arpita Shefali – BNYS, MD (Acu), Neurotherapist with 15+ years of experience. AYUSH Ministry felicitation. India's Most Trusted Healthcare Award 2021. BRC Clinic, Gurugram."/>
+  <link rel="canonical" href="https://brcclinic.in/about.html"/>
+  <meta property="og:title" content="About Dr. Arpita Shefali – BRC Clinic Gurugram"/>
+  <meta property="og:description" content="15+ years of holistic healing expertise. Recognized by AYUSH Ministry, Amisha Patel, Madan Lal & more."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .timeline { position:relative; padding:2rem 0; }
+    .timeline::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:2px; background:linear-gradient(var(--secondary),var(--primary)); transform:translateX(-50%); }
+    .tl-item { display:grid; grid-template-columns:1fr 60px 1fr; gap:1rem; align-items:center; margin-bottom:2.5rem; }
+    .tl-dot { width:18px; height:18px; border-radius:50%; background:var(--secondary); border:3px solid var(--white); box-shadow:0 0 0 3px var(--secondary); margin:0 auto; z-index:1; }
+    .tl-left { text-align:right; }
+    .tl-right { text-align:left; }
+    .tl-empty { display:block; }
+    .tl-year { font-family:'Outfit',sans-serif; font-weight:800; font-size:1.1rem; color:var(--primary); }
+    .tl-title { font-family:'Outfit',sans-serif; font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:0.25rem; }
+    .tl-desc { font-size:0.85rem; color:var(--text-mid); line-height:1.6; }
+    .tl-card { background:var(--white); border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; box-shadow:var(--shadow-xs); transition:var(--transition); }
+    .tl-card:hover { border-color:var(--secondary); box-shadow:var(--shadow-sm); }
+    .mission-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; }
+    .mission-card { background:var(--white); border-radius:var(--r-lg); padding:2rem 1.5rem; text-align:center; border:1px solid var(--border); transition:var(--transition); }
+    .mission-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--secondary); }
+    .mission-icon { font-size:2.5rem; margin-bottom:1rem; }
+    .mission-card h3 { font-family:'Outfit',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); margin-bottom:0.5rem; }
+    .mission-card p { font-size:0.875rem; color:var(--text-mid); line-height:1.65; }
+    .cert-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-top:2rem; }
+    .cert-card { background:var(--primary-pale); border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; display:flex; align-items:center; gap:0.75rem; transition:var(--transition); }
+    .cert-card:hover { border-color:var(--primary); background:var(--white); }
+    .cert-icon { font-size:1.4rem; flex-shrink:0; }
+    .cert-text { font-size:0.875rem; font-weight:600; color:var(--text); }
+    @media(max-width:768px){
+      .timeline::before{left:20px;}
+      .tl-item{grid-template-columns:40px 1fr;gap:0.75rem;}
+      .tl-left{display:none;}
+      .tl-dot{margin:0;}
+      .mission-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="scroll-progress"></div>
+<div id="loading-screen"><div class="loading-logo">BRC <span>Clinic</span></div><div class="loading-bar-wrap"><div class="loading-bar"></div></div><p class="loading-text">Loading...</p></div>
+<div id="cookie-bar"><p>🍪 We use cookies to improve your experience. <a href="privacy-policy.html">Learn more</a></p><div class="cookie-btns"><button class="btn-cookie-accept" id="cookieAccept">Accept</button><button class="btn-cookie-decline" id="cookieDecline">Decline</button></div></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">B</div><div class="nav-logo-text">BRC <span>Clinic</span></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="conditions.html">Conditions</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="testimonials.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-lang" id="langToggle">हिं / EN</button>
+      <button class="btn-theme" id="themeToggle">🌙</button>
+      <a href="appointment.html" class="btn-nav-cta">📅 Book Now</a>
+    </div>
+    <div id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div id="menu-overlay"></div>
+<div id="mobile-menu">
+  <div class="mobile-menu-links">
+    <a href="index.html">🏠 Home</a><a href="about.html">👩‍⚕️ About Dr. Arpita</a><a href="services.html">💊 Services</a><a href="conditions.html">🩺 Conditions</a><a href="blog.html">📝 Blog</a><a href="testimonials.html">⭐ Reviews</a><a href="appointment.html">📅 Book Appointment</a><a href="contact.html">📞 Contact</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></div>
+  <h1>About <span style="color:var(--secondary)">Dr. Arpita Shefali</span></h1>
+  <p>15+ Years of Healing Excellence · Recognized by AYUSH Ministry · India's Most Trusted Healthcare Award 2021</p>
+</div>
+
+<!-- DOCTOR DETAILED PROFILE -->
+<section class="section doctor-section" style="background:var(--white)">
+  <div class="container">
+    <div class="doctor-grid">
+      <div class="reveal-left doctor-img-wrap">
+        <img src="images/dr-arpita.jpg" alt="Dr. Arpita Shefali – BRC Clinic Gurugram" class="doctor-img" onerror="this.style.background='linear-gradient(135deg,#E8F4FD,#0D7377)';this.style.minHeight='400px';"/>
+        <div class="doctor-cert-badge"><div class="num">15+</div><p>Years of Excellence</p></div>
+      </div>
+      <div class="reveal-right doctor-info">
+        <div class="section-label">Lead Physician & Founder</div>
+        <h1 class="doctor-name" style="font-size:2.2rem;">Dr. Arpita Shefali</h1>
+        <div class="doctor-quals">
+          <span class="qual-tag">BNYS</span><span class="qual-tag">MD (Acu)</span><span class="qual-tag">DHNS</span><span class="qual-tag">DECE</span><span class="qual-tag">Neurotherapist</span><span class="qual-tag">Hypno Therapist</span><span class="qual-tag">Reiki Master</span>
+        </div>
+        <p class="doctor-bio">Dr. Arpita Shefali is a trailblazer in integrative and holistic medicine, combining the best of naturopathy, acupuncture, neurotherapy, physiotherapy and advanced diagnostics to deliver transformational results for her patients.</p>
+        <p class="doctor-bio">With over 15 years of hands-on clinical experience and 25,550+ patients treated, she has pioneered a unique approach that identifies the root cause of chronic diseases and addresses them through a synergistic blend of ancient healing wisdom and cutting-edge medical technology.</p>
+        <p class="doctor-bio">Her clinic is equipped with US FDA-approved medical devices sourced from Germany, Japan, China and India, enabling precise, non-invasive diagnosis and treatment for a wide spectrum of conditions — from spine disorders to fertility challenges, from neurological diseases to lifestyle disorders.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="appointment.html" class="btn-primary">📅 Book with Dr. Arpita</a>
+          <a href="tel:+919311642999" class="btn-secondary">📞 +91 93116 42999</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / VALUES -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Our Philosophy</div>
+      <h2 class="section-title">Mission, Vision & <span class="accent">Values</span></h2>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card reveal">
+        <div class="mission-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To provide affordable, accessible, non-surgical holistic healing that treats the root cause — empowering every patient to reclaim their health, mobility and quality of life.</p>
+      </div>
+      <div class="mission-card reveal" style="transition-delay:0.15s">
+        <div class="mission-icon">🌟</div>
+        <h3>Our Vision</h3>
+        <p>To be India's most trusted integrative medicine clinic, bridging the ancient wisdom of naturopathy and acupuncture with precision modern diagnostics and evidence-based therapies.</p>
+      </div>
+      <div class="mission-card reveal" style="transition-delay:0.3s">
+        <div class="mission-icon">💛</div>
+        <h3>Our Values</h3>
+        <p>Compassion, transparency and patient-first care. Every treatment plan is personalized. Every patient deserves honest assessment of what we can and cannot achieve together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS & SPECIALIZATIONS -->
+<section class="section" style="background:var(--white)">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Qualifications</div>
+      <h2 class="section-title">Certifications & <span class="accent">Specializations</span></h2>
+      <p class="section-desc">Dr. Arpita holds multiple advanced certifications across naturopathy, acupuncture, neuroscience and holistic healing disciplines.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal"><div class="cert-icon">🎓</div><div class="cert-text">BNYS – Bachelor of Naturopathy & Yogic Sciences</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🎓</div><div class="cert-text">MD (Acu) – Doctor of Medicine in Acupuncture</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🎓</div><div class="cert-text">DHNS – Diploma in Holistic Nutrition Sciences</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🎓</div><div class="cert-text">DECE – Diploma in ECE (Child Health)</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🧠</div><div class="cert-text">Certified Neurotherapist</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🌀</div><div class="cert-text">Certified Hypnotherapist</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">✨</div><div class="cert-text">Reiki Grand Master</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🪡</div><div class="cert-text">Master Tung Acupuncture Specialist</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🌿</div><div class="cert-text">Classical & Modern Naturopathy</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🔬</div><div class="cert-text">Biofeedback Diagnosis Expert</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🩺</div><div class="cert-text">Nadi Pariksha & Pulse Diagnosis</div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🌺</div><div class="cert-text">Yoga Therapy Practitioner</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS & RECOGNITION -->
+<section class="awards-section" style="padding:5rem 2rem;">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title" style="color:var(--white)">Awards & <span style="color:var(--gold-light)">Recognition</span></h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card reveal"><div class="award-icon">🏛️</div><h4>AYUSH Ministry Felicitation</h4><p>Officially recognized and felicitated by India's Ministry of AYUSH for outstanding contributions to alternative medicine.</p></div>
+      <div class="award-card reveal" style="transition-delay:0.1s"><div class="award-icon">🏆</div><h4>India's Most Trusted Healthcare Award – 2021</h4><p>Awarded at the national level for exceptional patient outcomes and holistic healthcare excellence.</p></div>
+      <div class="award-card reveal" style="transition-delay:0.2s"><div class="award-icon">🎬</div><h4>Endorsed by Amisha Patel</h4><p>Bollywood actress Amisha Patel recognized BRC as the Most Trusted Acupuncture & Acupressure Clinic.</p></div>
+      <div class="award-card reveal" style="transition-delay:0.3s"><div class="award-icon">🏏</div><h4>Felicitated by Madan Lal</h4><p>Honored by Mr. Madan Lal, the legendary Coach of the Indian Cricket Team.</p></div>
+      <div class="award-card reveal" style="transition-delay:0.4s"><div class="award-icon">🚀</div><h4>Acknowledged by Dr. Vivek Bindra</h4><p>Recognized by India's most-watched motivational speaker and startup mentor.</p></div>
+      <div class="award-card reveal" style="transition-delay:0.5s"><div class="award-icon">🌍</div><h4>US FDA Equipment Standards</h4><p>Clinic equipped with internationally certified diagnostic and treatment devices from 4 countries.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL TIMELINE -->
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Journey</div>
+      <h2 class="section-title">Professional <span class="accent">Timeline</span></h2>
+    </div>
+    <div class="timeline" style="max-width:900px;margin:3rem auto 0;">
+      <div class="tl-item reveal">
+        <div class="tl-left"><div class="tl-card"><div class="tl-year">2008</div><div class="tl-title">BNYS Graduation</div><div class="tl-desc">Completed Bachelor of Naturopathy & Yogic Sciences with distinction.</div></div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-right"><div class="tl-card"><div class="tl-year">2010</div><div class="tl-title">MD in Acupuncture</div><div class="tl-desc">Completed post-graduate MD (Acu) specializing in Classic and Master Tung Acupuncture techniques.</div></div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-left"><div class="tl-card"><div class="tl-year">2012</div><div class="tl-title">Clinic Foundation</div><div class="tl-desc">Established the foundation of BRC Clinic with a vision to offer holistic, non-surgical healing.</div></div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-right"><div class="tl-card"><div class="tl-year">2015</div><div class="tl-title">Advanced Certifications</div><div class="tl-desc">Obtained certifications in Neurotherapy, Hypnotherapy and Reiki Grand Master.</div></div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-left"><div class="tl-card"><div class="tl-year">2018</div><div class="tl-title">US FDA Equipment Integration</div><div class="tl-desc">Introduced US FDA-approved diagnostic equipment from Germany, Japan, China & India into the clinic.</div></div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-empty"></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-empty"></div>
+        <div class="tl-dot"></div>
+        <div class="tl-right"><div class="tl-card"><div class="tl-year">2021</div><div class="tl-title">India's Most Trusted Healthcare Award</div><div class="tl-desc">Recognized at the national level. Endorsed by Amisha Patel, Madan Lal & Dr. Vivek Bindra. Felicitated by AYUSH Ministry.</div></div></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-left"><div class="tl-card"><div class="tl-year">2025</div><div class="tl-title">25,550+ Patients Healed</div><div class="tl-desc">Milestone reached — over 25,550 patients from across India have found lasting relief at BRC Clinic.</div></div></div>
+        <div class="tl-dot" style="background:var(--gold);box-shadow:0 0 0 3px var(--gold);"></div>
+        <div class="tl-empty"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team-section">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">The <span class="accent">People</span> Behind Your Healing</h2>
+      <p class="section-desc">Every therapist at BRC Clinic is hand-picked, trained and supervised by Dr. Arpita to ensure the highest standards of patient care.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-img-wrap">
+          <img src="images/dr-arpita.jpg" alt="Dr. Arpita Shefali" class="team-img" onerror="this.style.background='#E8F4FD';"/>
+          <div class="team-card-role">Lead Physician & Founder</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Dr. Arpita Shefali</div>
+          <div class="team-qual">BNYS · MD (Acu) · DHNS · DECE</div>
+          <span class="team-exp">15+ Years Experience</span>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.15s">
+        <div class="team-img-wrap">
+          <img src="images/monika-gola.jpg" alt="Monika Gola" class="team-img" onerror="this.style.background='#0A3D62';"/>
+          <div class="team-card-role">Senior Therapist</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Monika Gola</div>
+          <div class="team-qual">Master Diploma in Acupuncture</div>
+          <span class="team-exp">4 Years Experience</span>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.3s">
+        <div class="team-img-wrap">
+          <div style="width:100%;aspect-ratio:1;background:linear-gradient(135deg,#0A3D62,#0D7377);display:flex;align-items:center;justify-content:center;font-size:5rem;">👨‍⚕️</div>
+          <div class="team-card-role">Senior Therapist</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Rohit Tomar</div>
+          <div class="team-qual">Master Diploma in Acupuncture</div>
+          <span class="team-exp">2.5 Years Experience</span>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.45s">
+        <div class="team-img-wrap">
+          <img src="images/gaurav-kumar.jpg" alt="Gaurav Kumar" class="team-img" onerror="this.style.background='#0D7377';"/>
+          <div class="team-card-role">Senior Therapist</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Gaurav Kumar</div>
+          <div class="team-qual">Master Diploma in Acupuncture</div>
+          <span class="team-exp">2.5 Years Experience</span>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.6s">
+        <div class="team-img-wrap">
+          <img src="images/raviya-mansori.jpg" alt="Raviya Mansori" class="team-img" onerror="this.style.background='#C9815A';"/>
+          <div class="team-card-role">Junior Therapist</div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Raviya Mansori</div>
+          <div class="team-qual">Master Diploma in Acupuncture</div>
+          <span class="team-exp">1.5 Years Experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready to Start Your Healing Journey?</h2>
+    <p>Book a consultation with Dr. Arpita Shefali today and take the first step towards lasting relief.</p>
+    <div class="cta-banner-actions">
+      <a href="appointment.html" class="btn-cta-white">📅 Book Appointment</a>
+      <a href="tel:+919311642999" class="btn-cta-outline">📞 +91 93116 42999</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">BRC <span>Clinic</span></div><p class="footer-desc">Advanced holistic healing center in Gurugram. Led by Dr. Arpita Shefali with 15+ years of experience.</p><div class="footer-social"><a href="https://instagram.com/biophysiotherapy" target="_blank" class="social-icon">📸</a><a href="https://facebook.com" target="_blank" class="social-icon">👥</a><a href="https://wa.me/919311642999" target="_blank" class="social-icon">💬</a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="appointment.html">Book Appointment</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919311642999">📞 +91 93116 42999</a></li><li><a href="tel:+917050002000">📞 +91 70500 02000</a></li><li><a href="mailto:ceo@aarogita.com">✉️ ceo@aarogita.com</a></li><li><a href="contact.html">📍 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms & Conditions</a></li><li><a href="sitemap.xml">Sitemap</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 BRC Clinic – Pain, Spine & Joint Rehab. All rights reserved. | 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</p><div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+</footer>
+
+<a href="https://wa.me/919311642999?text=Hello%20BRC%20Clinic!" target="_blank" id="whatsapp-btn">💬</a>
+<a href="tel:+919311642999" id="call-btn">📞</a>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

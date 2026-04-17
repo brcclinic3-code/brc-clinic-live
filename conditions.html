@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conditions Treated | BRC Clinic – Pain, Spine & Joint Rehab</title>
+  <meta name="description" content="Explore the comprehensive list of conditions we treat organically including Spondylitis, Slip Disc, Parkinson's, Tinnitus & more at BRC Clinic."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">B</div>
+      <div class="nav-logo-text">BRC <span>Clinic</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="nav-dropdown">
+        <a href="services.html">Services ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="services.html#acupuncture">Acupuncture</a>
+          <a href="services.html#physiotherapy">Physiotherapy</a>
+          <a href="services.html">All Services →</a>
+        </div>
+      </li>
+      <li><a href="conditions.html" class="active">Conditions</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="testimonials.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-theme" id="themeToggle" title="Toggle Dark/Light Mode">🌙</button>
+      <a href="appointment.html" class="btn-nav-cta">📅 Book Now</a>
+    </div>
+    <div id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+  <h1>Conditions Treated</h1>
+  <p>An interactive guide to the problems we diagnose by their root cause.</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> <span>/</span> Conditions
+  </div>
+</div>
+
+<!-- ── INTERACTIVE BODY MAP SECTION ── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">Interactive Diagnosis</div>
+      <h2 class="section-title">Where does it <span class="accent">hurt?</span></h2>
+      <p class="section-desc">Click on a body part to see the conditions we treat and therapies we offer.</p>
+    </div>
+
+    <div class="body-map-container">
+      <div class="map-visual">
+        <!-- Minimalistic SVG Body Map -->
+        <svg viewBox="0 0 200 400" class="body-svg">
+          <!-- Head -->
+          <circle cx="100" cy="40" r="25" class="map-part" data-title="Head & Brain" data-desc="Neurological disorders, migraines, mental health, and sensory issues." data-treatments="Stroke Rehab, Parkinson's Support, Tinnitus, Insomnia, Migraine, Anxiety, Depression, Coma Rehab, Hearing Loss"/>
+          <!-- Neck -->
+          <rect x="85" y="65" width="30" height="20" class="map-part" data-title="Neck & Cervical Spine" data-desc="Neck pain, stiffness, and nerve compression." data-treatments="Cervical Spondylitis, Neck Pain, Whiplash, Posture Correction"/>
+          <!-- Shoulders -->
+          <path d="M 40 85 Q 100 80 160 85 L 160 110 L 40 110 Z" class="map-part" data-title="Shoulders & Upper Back" data-desc="Joint inflammation, muscle tension, and mobility issues." data-treatments="Frozen Shoulder, Thoracic Spondylitis, Muscle Strain"/>
+          <!-- Arms & Hands -->
+          <rect x="30" y="110" width="20" height="120" rx="10" class="map-part" data-title="Arms & Hands" data-desc="Nerve issues, joint pain, and numbness." data-treatments="Peripheral Neuropathy, Numbness, Tingling Sensation, Arthritis"/>
+          <rect x="150" y="110" width="20" height="120" rx="10" class="map-part" data-title="Arms & Hands" data-desc="Nerve issues, joint pain, and numbness." data-treatments="Peripheral Neuropathy, Numbness, Tingling Sensation, Arthritis"/>
+          <!-- Torso/Organs -->
+          <rect x="60" y="110" width="80" height="100" class="map-part" data-title="Torso & Internal Organs" data-desc="Metabolic, gut, and hormonal issues." data-treatments="IBS, Leaky Gut, Diabetes Support, Thyroid, Heart & BP, Weight Management, Low Immunity"/>
+          <!-- Lower Back / Pelvis -->
+          <path d="M 60 210 L 140 210 L 130 250 L 70 250 Z" class="map-part" data-title="Lower Back & Pelvis" data-desc="Spine conditions, reproductive health, and chronic pain." data-treatments="Lumbar Spondylitis, Slip Disc, Herniation, Sciatica, PCOD/PCOS, Fertility (M/F), IVF Support"/>
+          <!-- Legs -->
+          <rect x="70" y="250" width="25" height="130" rx="10" class="map-part" data-title="Legs & Knees" data-desc="Joint wear, balance issues, and surgery avoidance." data-treatments="Knee Pain, Knee Replacement Avoidance, Osteoarthritis, Old Age Stability, Varicose Veins"/>
+          <rect x="105" y="250" width="25" height="130" rx="10" class="map-part" data-title="Legs & Knees" data-desc="Joint wear, balance issues, and surgery avoidance." data-treatments="Knee Pain, Knee Replacement Avoidance, Osteoarthritis, Old Age Stability, Varicose Veins"/>
+        </svg>
+      </div>
+      <div class="map-info">
+        <div id="map-info-placeholder" class="map-info-placeholder">
+          <em>Select a body part on the left to view related treatments.</em>
+        </div>
+        <div id="map-info-content" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 BRC Clinic – Pain, Spine & Joint Rehab. All rights reserved. | 342P, Basement, Near Medicity, Islampur Village, Sector 38, Gurugram – 122001</p>
+    <div class="footer-bottom-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/919311642999" target="_blank" id="whatsapp-btn" title="Chat on WhatsApp">💬</a>
+<a href="tel:+919311642999" id="call-btn" title="Call Us">📞</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

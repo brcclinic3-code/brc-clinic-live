@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Blog – BRC Clinic Gurugram | Tips for Pain, Spine & Holistic Healing</title>
+  <meta name="description" content="Expert health articles by Dr. Arpita Shefali. Tips on back pain, acupuncture, fertility, weight loss, natural healing and more from BRC Clinic Gurugram."/>
+  <link rel="canonical" href="https://brcclinic.in/blog.html"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .blog-filter { display:flex;gap:0.75rem;flex-wrap:wrap;margin:2rem 0; }
+    .filter-btn { padding:0.45rem 1rem;border-radius:var(--r-full);border:1.5px solid var(--border);font-size:0.85rem;font-weight:600;color:var(--text-mid);background:var(--white);transition:var(--transition-fast);cursor:pointer; }
+    .filter-btn:hover,.filter-btn.active { background:var(--primary);color:var(--white);border-color:var(--primary); }
+    .blog-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.75rem;margin-top:2rem; }
+    .blog-card { background:var(--white);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);transition:var(--transition); }
+    .blog-card:hover { transform:translateY(-6px);box-shadow:var(--shadow-lg); }
+    .blog-img { width:100%;height:200px;object-fit:cover;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:4rem;color:white; }
+    .blog-body { padding:1.5rem; }
+    .blog-cat { display:inline-block;background:var(--secondary-light);color:var(--secondary-dark);padding:0.2rem 0.65rem;border-radius:var(--r-full);font-size:0.75rem;font-weight:700;margin-bottom:0.75rem; }
+    .blog-title { font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:0.5rem;line-height:1.4; }
+    .blog-excerpt { font-size:0.875rem;color:var(--text-mid);line-height:1.65;margin-bottom:1rem; }
+    .blog-meta { display:flex;align-items:center;justify-content:space-between;font-size:0.78rem;color:var(--text-light);padding-top:1rem;border-top:1px solid var(--border); }
+    .blog-author { display:flex;align-items:center;gap:0.5rem; }
+    .blog-avatar { width:28px;height:28px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;color:white;font-size:0.7rem;font-weight:700; }
+    .read-more { color:var(--primary);font-weight:700;font-size:0.875rem;display:inline-flex;align-items:center;gap:0.25rem;transition:gap 0.3s; }
+    .blog-card:hover .read-more { gap:0.5rem; }
+    .featured-article { background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:var(--r-xl);padding:3rem;color:white;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;margin-bottom:3rem; }
+    .featured-label { background:rgba(255,255,255,0.2);display:inline-block;padding:0.3rem 0.75rem;border-radius:var(--r-full);font-size:0.75rem;font-weight:700;letter-spacing:1px;margin-bottom:1rem; }
+    .featured-title { font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:0.75rem;line-height:1.3; }
+    .featured-excerpt { font-size:0.95rem;opacity:0.85;line-height:1.7;margin-bottom:1.5rem; }
+    .newsletter-box { background:var(--cream2);border:1px solid var(--border-light);border-radius:var(--r-xl);padding:2.5rem;text-align:center;margin-top:4rem; }
+    @media(max-width:768px){.featured-article{grid-template-columns:1fr;}.blog-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-progress"></div>
+<div id="loading-screen"><div class="loading-logo">BRC <span>Clinic</span></div><div class="loading-bar-wrap"><div class="loading-bar"></div></div><p class="loading-text">Loading Blog...</p></div>
+<div id="cookie-bar"><p>🍪 We use cookies. <a href="privacy-policy.html">Learn more</a></p><div class="cookie-btns"><button class="btn-cookie-accept" id="cookieAccept">Accept</button><button class="btn-cookie-decline" id="cookieDecline">Decline</button></div></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">B</div><div class="nav-logo-text">BRC <span>Clinic</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-actions"><button class="btn-lang" id="langToggle">हिं / EN</button><button class="btn-theme" id="themeToggle">🌙</button><a href="appointment.html" class="btn-nav-cta">📅 Book Now</a></div>
+    <div id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div id="menu-overlay"></div>
+<div id="mobile-menu"><div class="mobile-menu-links"><a href="index.html">🏠 Home</a><a href="about.html">👩‍⚕️ About</a><a href="services.html">💊 Services</a><a href="conditions.html">🩺 Conditions</a><a href="blog.html">📝 Blog</a><a href="testimonials.html">⭐ Reviews</a><a href="appointment.html">📅 Book Appointment</a><a href="contact.html">📞 Contact</a></div></div>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Health Blog</span></div>
+  <h1>Health & <span style="color:var(--secondary)">Wellness Blog</span></h1>
+  <p>Expert insights from Dr. Arpita Shefali on pain management, holistic healing, naturopathy and more.</p>
+</div>
+
+<section class="section" style="background:var(--cream)">
+  <div class="container">
+
+    <!-- FEATURED -->
+    <div class="featured-article reveal">
+      <div>
+        <div class="featured-label">⭐ FEATURED ARTICLE</div>
+        <div class="featured-title">5 Proven Acupuncture Techniques That Eliminate Chronic Back Pain Without Surgery</div>
+        <div class="featured-excerpt">Millions of Indians suffer from chronic back pain, often told that surgery is their only option. Dr. Arpita Shefali reveals the 5 most effective acupuncture techniques that have helped over 25,000+ patients find lasting relief naturally.</div>
+        <a href="#" class="btn-cta-white" style="display:inline-flex;align-items:center;gap:0.5rem;">📖 Read Full Article →</a>
+      </div>
+      <div style="display:flex;justify-content:center;align-items:center;font-size:8rem;opacity:0.3;">🦴</div>
+    </div>
+
+    <!-- FILTER -->
+    <div class="blog-filter">
+      <button class="filter-btn active" onclick="filterBlog('all',this)">All Articles</button>
+      <button class="filter-btn" onclick="filterBlog('pain',this)">🦴 Pain & Spine</button>
+      <button class="filter-btn" onclick="filterBlog('acupuncture',this)">🪡 Acupuncture</button>
+      <button class="filter-btn" onclick="filterBlog('naturopathy',this)">🌿 Naturopathy</button>
+      <button class="filter-btn" onclick="filterBlog('fertility',this)">🧬 Fertility</button>
+      <button class="filter-btn" onclick="filterBlog('mental',this)">🧠 Mental Health</button>
+      <button class="filter-btn" onclick="filterBlog('lifestyle',this)">⚖️ Lifestyle</button>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid" id="blogGrid">
+      <div class="blog-card reveal" data-cat="pain">
+        <div class="blog-img">🦴</div>
+        <div class="blog-body">
+          <span class="blog-cat">Pain & Spine</span>
+          <div class="blog-title">Slip Disc: Symptoms, Causes & How to Avoid Surgery Through Holistic Treatment</div>
+          <div class="blog-excerpt">Slip disc doesn't always require surgery. Learn how acupuncture and physiotherapy can heal herniated discs naturally.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>5 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="acupuncture" style="transition-delay:.1s">
+        <div class="blog-img">🪡</div>
+        <div class="blog-body">
+          <span class="blog-cat">Acupuncture</span>
+          <div class="blog-title">What is Master Tung Acupuncture and Why It Works Faster Than Classic Acupuncture</div>
+          <div class="blog-excerpt">Master Tung's acupuncture system is one of the most powerful healing traditions. Here's why it's so effective for chronic conditions.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>7 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="fertility" style="transition-delay:.2s">
+        <div class="blog-img">🧬</div>
+        <div class="blog-body">
+          <span class="blog-cat">Fertility</span>
+          <div class="blog-title">How Acupuncture & Naturopathy Can Double Your IVF Success Chances</div>
+          <div class="blog-excerpt">Scientific evidence shows that acupuncture before and during IVF significantly improves implantation rates. Dr. Arpita explains how.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>8 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="mental" style="transition-delay:.1s">
+        <div class="blog-img">🧠</div>
+        <div class="blog-body">
+          <span class="blog-cat">Mental Health</span>
+          <div class="blog-title">Beating Anxiety & Insomnia Without Sleeping Pills: A Neurotherapy Approach</div>
+          <div class="blog-excerpt">Millions rely on sleeping pills for insomnia, unaware of the long-term damage. Neurotherapy offers a safe, lasting solution.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>6 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="naturopathy" style="transition-delay:.2s">
+        <div class="blog-img">🌿</div>
+        <div class="blog-body">
+          <span class="blog-cat">Naturopathy</span>
+          <div class="blog-title">The 5 Elements of Holistic Health: How Balancing Chakras & Meridians Heals the Body</div>
+          <div class="blog-excerpt">Ancient wisdom meets modern science. Dr. Arpita explains the five elements approach to complete body-mind healing.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>9 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="lifestyle" style="transition-delay:.3s">
+        <div class="blog-img">⚖️</div>
+        <div class="blog-body">
+          <span class="blog-cat">Lifestyle</span>
+          <div class="blog-title">Why Crash Diets Fail and How Acupuncture + Naturopathy Achieves Lasting Weight Loss</div>
+          <div class="blog-excerpt">Weight loss is about more than calories. Discover the holistic approach that addresses metabolism, hormones and lifestyle together.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>6 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="pain" style="transition-delay:.1s">
+        <div class="blog-img">🦵</div>
+        <div class="blog-body">
+          <span class="blog-cat">Pain & Spine</span>
+          <div class="blog-title">Knee Replacement Surgery vs. Holistic Treatment: What 25,000+ Patients Taught Us</div>
+          <div class="blog-excerpt">Many patients scheduled for knee replacement have avoided surgery completely. Here's what makes holistic treatment work.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>7 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="acupuncture" style="transition-delay:.2s">
+        <div class="blog-img">✨</div>
+        <div class="blog-body">
+          <span class="blog-cat">Acupuncture</span>
+          <div class="blog-title">Fire Cupping & Gua Sha: Ancient Chinese Therapies That Modern Medicine Is Now Validating</div>
+          <div class="blog-excerpt">Once dismissed as pseudoscience, modern research now confirms the powerful effects of cupping and Gua Sha for pain and healing.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>5 min read</span></div>
+        </div>
+      </div>
+      <div class="blog-card reveal" data-cat="lifestyle" style="transition-delay:.3s">
+        <div class="blog-img">🩺</div>
+        <div class="blog-body">
+          <span class="blog-cat">Lifestyle</span>
+          <div class="blog-title">Tinnitus: Why That Ringing in Your Ears Could Be a Sign of a Deeper Imbalance</div>
+          <div class="blog-excerpt">Tinnitus is rarely just an ear problem. Dr. Arpita explains the root causes and how acupuncture provides remarkable relief.</div>
+          <a href="#" class="read-more">Read More →</a>
+          <div class="blog-meta"><div class="blog-author"><div class="blog-avatar">DA</div> Dr. Arpita Shefali</div><span>5 min read</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter-box reveal">
+      <div class="section-label" style="justify-content:center;">Stay Informed</div>
+      <h3 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:var(--primary);margin-bottom:0.5rem;">Get Weekly Health Tips from Dr. Arpita</h3>
+      <p style="font-size:0.925rem;color:var(--text-mid);margin-bottom:1.5rem;">No spam. Just practical, expert health advice delivered to your WhatsApp.</p>
+      <a href="https://wa.me/919311642999?text=Hello!%20I%20would%20like%20to%20subscribe%20to%20health%20tips%20from%20BRC%20Clinic." target="_blank" class="btn-primary" style="display:inline-flex;gap:0.5rem;">💬 Subscribe via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">BRC <span>Clinic</span></div><p class="footer-desc">Expert health articles and holistic healing insights from Dr. Arpita Shefali.</p><div class="footer-social"><a href="https://instagram.com/biophysiotherapy" target="_blank" class="social-icon">📸</a><a href="https://wa.me/919311642999" target="_blank" class="social-icon">💬</a></div></div>
+    <div class="footer-col"><h4>Blog Categories</h4><ul><li><a href="#">Pain & Spine</a></li><li><a href="#">Acupuncture</a></li><li><a href="#">Naturopathy</a></li><li><a href="#">Fertility</a></li><li><a href="#">Mental Health</a></li><li><a href="#">Lifestyle</a></li></ul></div>
+    <div class="footer-col"><h4>Clinic</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="appointment.html">Book Appointment</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919311642999">📞 +91 93116 42999</a></li><li><a href="mailto:ceo@aarogita.com">✉️ ceo@aarogita.com</a></li><li><a href="contact.html">📍 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 BRC Clinic – Pain, Spine & Joint Rehab. All rights reserved. | 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</p></div>
+</footer>
+<a href="https://wa.me/919311642999" target="_blank" id="whatsapp-btn">💬</a>
+<a href="tel:+919311642999" id="call-btn">📞</a>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div id="toast"></div>
+<script src="js/main.js"></script>
+<script>
+function filterBlog(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.blog-card').forEach(card=>{
+    if(cat==='all'||card.dataset.cat===cat){card.style.display='block';}
+    else{card.style.display='none';}
+  });
+}
+</script>
+</body>
+</html>

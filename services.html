@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – BRC Clinic Gurugram | Acupuncture, Physiotherapy, Naturopathy & 35+ Therapies</title>
+  <meta name="description" content="35+ advanced holistic therapies at BRC Clinic Gurugram. Acupuncture, Physiotherapy, Naturopathy, Fertility Support, Neurotherapy, Fire Cupping, Biofeedback & more. Near Medanta, Sector 38."/>
+  <link rel="canonical" href="https://brcclinic.in/services.html"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .service-section-block { margin-bottom:4rem; scroll-margin-top:90px; }
+    .service-section-header { display:flex; align-items:center; gap:1rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:2px solid var(--secondary-light); }
+    .service-section-icon { width:54px;height:54px;border-radius:var(--r-md);background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0; }
+    .service-section-header h2 { font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:var(--primary); }
+    .service-section-header p { font-size:0.875rem;color:var(--text-mid);margin-top:0.2rem; }
+    .service-detail-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem; }
+    .sdg-card { background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem 1.5rem;transition:var(--transition);position:relative;overflow:hidden; }
+    .sdg-card::after { content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--secondary),var(--gold));transform:scaleX(0);transition:transform 0.35s ease;transform-origin:left; }
+    .sdg-card:hover { transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--secondary); }
+    .sdg-card:hover::after { transform:scaleX(1); }
+    .sdg-icon { font-size:2rem;margin-bottom:0.75rem; }
+    .sdg-card h3 { font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:0.5rem; }
+    .sdg-card p { font-size:0.86rem;color:var(--text-mid);line-height:1.65; }
+    .sdg-tag { display:inline-block;margin-top:0.75rem;background:var(--secondary-light);color:var(--secondary-dark);padding:0.25rem 0.65rem;border-radius:var(--r-full);font-size:0.75rem;font-weight:600; }
+    .service-nav { position:sticky;top:76px;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0.75rem 1.5rem; }
+    .service-nav-inner { max-width:1300px;margin:0 auto;display:flex;gap:0.75rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none; }
+    .service-nav-inner::-webkit-scrollbar { display:none; }
+    .snav-btn { flex-shrink:0;padding:0.45rem 1rem;border-radius:var(--r-full);border:1.5px solid var(--border);font-size:0.82rem;font-weight:600;color:var(--text-mid);background:var(--cream);transition:var(--transition-fast);white-space:nowrap; }
+    .snav-btn:hover,.snav-btn.active { background:var(--primary);color:var(--white);border-color:var(--primary); }
+    .home-visit-section { background:linear-gradient(135deg,var(--accent),var(--primary));border-radius:var(--r-xl);padding:2.5rem;color:var(--white);text-align:center;margin-top:3rem; }
+    .home-visit-section h3 { font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:0.75rem; }
+    .home-visit-section p { font-size:0.95rem;opacity:0.9;margin-bottom:1.5rem; }
+  </style>
+</head>
+<body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-progress"></div>
+<div id="loading-screen"><div class="loading-logo">BRC <span>Clinic</span></div><div class="loading-bar-wrap"><div class="loading-bar"></div></div><p class="loading-text">Loading Services...</p></div>
+<div id="cookie-bar"><p>🍪 We use cookies. <a href="privacy-policy.html">Learn more</a></p><div class="cookie-btns"><button class="btn-cookie-accept" id="cookieAccept">Accept</button><button class="btn-cookie-decline" id="cookieDecline">Decline</button></div></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">B</div><div class="nav-logo-text">BRC <span>Clinic</span></div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="blog.html">Blog</a></li><li><a href="testimonials.html">Reviews</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions"><button class="btn-lang" id="langToggle">हिं / EN</button><button class="btn-theme" id="themeToggle">🌙</button><a href="appointment.html" class="btn-nav-cta">📅 Book Now</a></div>
+    <div id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div id="menu-overlay"></div>
+<div id="mobile-menu"><div class="mobile-menu-links"><a href="index.html">🏠 Home</a><a href="about.html">👩‍⚕️ About</a><a href="services.html">💊 Services</a><a href="conditions.html">🩺 Conditions</a><a href="blog.html">📝 Blog</a><a href="testimonials.html">⭐ Reviews</a><a href="appointment.html">📅 Book Appointment</a><a href="contact.html">📞 Contact</a></div></div>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+  <h1>Our <span style="color:var(--secondary)">35+ Therapies</span></h1>
+  <p>Advanced holistic treatments using US FDA-approved equipment — non-invasive, non-surgical, root-cause focused.</p>
+  <div style="margin-top:1rem;"><span class="home-visit-badge">🏡 Home Visit Available for All Services</span></div>
+</div>
+
+<!-- STICKY SERVICE NAV -->
+<div class="service-nav">
+  <div class="service-nav-inner">
+    <button class="snav-btn" onclick="scrollTo('acupuncture')">🪡 Acupuncture</button>
+    <button class="snav-btn" onclick="scrollTo('physiotherapy')">🤲 Physiotherapy</button>
+    <button class="snav-btn" onclick="scrollTo('naturopathy')">🌿 Naturopathy</button>
+    <button class="snav-btn" onclick="scrollTo('fertility')">🧬 Fertility</button>
+    <button class="snav-btn" onclick="scrollTo('neurotherapy')">🧠 Neurotherapy</button>
+    <button class="snav-btn" onclick="scrollTo('cupping')">🔥 Cupping & Gua Sha</button>
+    <button class="snav-btn" onclick="scrollTo('pain')">💊 Pain Management</button>
+    <button class="snav-btn" onclick="scrollTo('avoid-surgery')">🛡️ Avoid Surgery</button>
+    <button class="snav-btn" onclick="scrollTo('weight')">⚖️ Weight Management</button>
+    <button class="snav-btn" onclick="scrollTo('diagnosis')">🔬 Diagnosis</button>
+  </div>
+</div>
+
+<section class="section" style="background:var(--cream2)">
+  <div class="container">
+
+    <!-- ACUPUNCTURE -->
+    <div class="service-section-block" id="acupuncture">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🪡</div>
+        <div><h2>Acupuncture & Acupressure</h2><p>Classic, Master Tung & Electro-Acupuncture — with needle-free options available</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🪡</div><h3>Classic Acupuncture</h3><p>Traditional Chinese meridian-based acupuncture for pain relief, organ healing and energy balance. Deep, lasting results.</p><span class="sdg-tag">Needle-based</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">⚡</div><h3>Electroacupuncture</h3><p>Acupuncture enhanced with micro-electrical stimulation for faster healing, nerve regeneration and pain relief.</p><span class="sdg-tag">Advanced</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">👐</div><h3>Acupressure (Needle-Free)</h3><p>Pressure-point healing without needles — ideal for children, needle-phobic patients and seniors.</p><span class="sdg-tag">Needle-Free</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">🎯</div><h3>Master Tung Acupuncture</h3><p>Advanced Tung's acupuncture system — highly effective for chronic pain, auto-immune and neurological conditions.</p><span class="sdg-tag">Specialized</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">🌸</div><h3>Acupuncture for Beauty</h3><p>Facial rejuvenation, skin glow enhancement and cosmetic acupuncture for anti-aging benefits.</p><span class="sdg-tag">Cosmetic</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">💉</div><h3>Weight Loss Acupuncture</h3><p>Targeted acupuncture points to suppress appetite, boost metabolism and support sustainable weight loss.</p><span class="sdg-tag">Wellness</span></div>
+      </div>
+    </div>
+
+    <!-- PHYSIOTHERAPY -->
+    <div class="service-section-block" id="physiotherapy">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🤲</div>
+        <div><h2>Physiotherapy & Rehabilitation</h2><p>Evidence-based physical therapy for musculoskeletal, neurological and post-surgical conditions</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🦴</div><h3>Musculoskeletal Physiotherapy</h3><p>Targeted treatment for back pain, neck pain, joint pain, sports injuries and posture correction.</p><span class="sdg-tag">Pain Relief</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🧠</div><h3>Neurological Rehabilitation</h3><p>Specialized rehab for stroke, paralysis, Parkinson's, MS, nerve injuries and coma recovery.</p><span class="sdg-tag">Neuro</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">🏥</div><h3>Post-Surgery Rehabilitation</h3><p>Accelerated recovery protocols to restore function, reduce complications and prevent re-injury after surgery.</p><span class="sdg-tag">Post-Op</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">👴</div><h3>Geriatric Physiotherapy</h3><p>Specialized care for elderly patients — stability, balance, fall prevention, strength and mobility improvement.</p><span class="sdg-tag">Senior Care</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">🏃</div><h3>Sports Physiotherapy</h3><p>Injury assessment, rehabilitation and performance optimization for athletes and active individuals.</p><span class="sdg-tag">Sports</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">🏡</div><h3>Home Physiotherapy</h3><p>Professional physiotherapy at your home — ideal for bed-ridden, post-surgical and elderly patients.</p><span class="sdg-tag">Home Visit</span></div>
+      </div>
+    </div>
+
+    <!-- NATUROPATHY -->
+    <div class="service-section-block" id="naturopathy">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🌿</div>
+        <div><h2>Naturopathy & Yoga Therapy</h2><p>Holistic healing through nature, food, herbs and yogic sciences</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🌿</div><h3>Classical Naturopathy</h3><p>Hydrotherapy, mud therapy, sun therapy and nature-based treatments for chronic disease management.</p><span class="sdg-tag">Natural</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🧘</div><h3>Yoga Therapy</h3><p>Therapeutic yoga protocols designed for specific health conditions — spine, joints, stress, hormonal balance.</p><span class="sdg-tag">Mind-Body</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">🌱</div><h3>Herbal Medicine</h3><p>Evidence-based herbal formulations to support healing, immunity, digestion and hormonal balance.</p><span class="sdg-tag">Herbal</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">🥗</div><h3>Nutrition Consultation</h3><p>Personalized diet and nutrition plans to support treatment, manage weight, diabetes, thyroid and gut health.</p><span class="sdg-tag">Diet</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">🎵</div><h3>Music Therapy</h3><p>Therapeutic use of sound and music to reduce pain, anxiety, stress and support neurological recovery.</p><span class="sdg-tag">Wellness</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">⚡</div><h3>Quantum Energy Therapy</h3><p>Advanced energy medicine using quantum principles to optimize body's bioelectric field and natural healing.</p><span class="sdg-tag">Advanced</span></div>
+      </div>
+    </div>
+
+    <!-- FERTILITY -->
+    <div class="service-section-block" id="fertility">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🧬</div>
+        <div><h2>Fertility & IVF Support</h2><p>Advanced alternative therapies to optimize fertility and maximize IVF success rates</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🧬</div><h3>Fertility Enhancement (Male & Female)</h3><p>Acupuncture, naturopathy and advanced therapies to improve fertility naturally and boost reproductive health.</p><span class="sdg-tag">Fertility</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🔬</div><h3>IVF Success Support</h3><p>Advanced protocols using US FDA-approved devices to prepare the body for IVF and improve implantation rates.</p><span class="sdg-tag">IVF</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">🌸</div><h3>PCOD / PCOS Treatment</h3><p>Holistic management of PCOD/PCOS through acupuncture, naturopathy and hormonal balancing therapies.</p><span class="sdg-tag">Women's Health</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">⚖️</div><h3>Hormonal Imbalance</h3><p>Natural correction of hormonal imbalance — thyroid, estrogen, progesterone, testosterone without synthetic hormones.</p><span class="sdg-tag">Hormonal</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">🩸</div><h3>Menstrual Health</h3><p>Treatment for irregular periods, painful menstruation, heavy bleeding and menstrual disorders using natural therapies.</p><span class="sdg-tag">Women's Health</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">🧪</div><h3>Advanced Reproductive Diagnostics</h3><p>Non-invasive US FDA-approved diagnostic tools for precise root-cause analysis of fertility challenges.</p><span class="sdg-tag">Diagnosis</span></div>
+      </div>
+    </div>
+
+    <!-- NEUROTHERAPY -->
+    <div class="service-section-block" id="neurotherapy">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🧠</div>
+        <div><h2>Neurotherapy & Hypnotherapy</h2><p>Specialized interventions for neurological conditions and psychological wellness</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🧠</div><h3>Neurotherapy</h3><p>Advanced neurological treatment for nerve disorders, peripheral neuropathy, brain-related conditions and cognitive issues.</p><span class="sdg-tag">Neuro</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🌀</div><h3>Hypnotherapy</h3><p>Evidence-based hypnosis for anxiety, phobias, addictions, sleep disorders, weight management and pain control.</p><span class="sdg-tag">Mind Healing</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">✨</div><h3>Reiki & Energy Healing</h3><p>Grand Master level Reiki sessions for deep relaxation, stress relief, energy balancing and holistic wellbeing.</p><span class="sdg-tag">Energy</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">💊</div><h3>NIBS (Non-Invasive Brain Stimulation)</h3><p>Advanced brain stimulation therapy for stroke recovery, depression, cognitive enhancement and neurological healing.</p><span class="sdg-tag">Advanced</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">😴</div><h3>Insomnia & Sleep Therapy</h3><p>Comprehensive treatment for chronic insomnia, sleep disorders and circadian rhythm issues using natural approaches.</p><span class="sdg-tag">Sleep</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">💙</div><h3>Mental Health Support</h3><p>Supportive therapy for anxiety, depression, panic attacks, stress and emotional wellbeing without medication dependency.</p><span class="sdg-tag">Wellness</span></div>
+      </div>
+    </div>
+
+    <!-- CUPPING & GUA SHA -->
+    <div class="service-section-block" id="cupping">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🔥</div>
+        <div><h2>Fire Cupping, Gua Sha & Moxibustion</h2><p>Traditional Chinese healing arts for deep tissue relief and energy balance</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🔥</div><h3>Fire Cupping</h3><p>Traditional cupping therapy to improve blood circulation, release deep muscle tension and detoxify the body.</p><span class="sdg-tag">TCM</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🌊</div><h3>Gua Sha</h3><p>Scraping therapy to stimulate blood flow, reduce inflammation, relieve chronic pain and boost immunity.</p><span class="sdg-tag">TCM</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">🌿</div><h3>Moxibustion</h3><p>Heat therapy using moxa to warm meridians, dispel cold and treat conditions including arthritis, fertility and immunity.</p><span class="sdg-tag">TCM</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">💆</div><h3>Therapeutic Massage</h3><p>Deep tissue, relaxation and therapeutic massage to relieve muscle tension, improve circulation and reduce stress.</p><span class="sdg-tag">Massage</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">🩹</div><h3>Allergy Treatment</h3><p>Specialized acupuncture and naturopathy protocols to identify and treat root causes of allergic reactions.</p><span class="sdg-tag">Allergy</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">🫁</div><h3>Asthma & Sinus Relief</h3><p>Non-pharmaceutical management of asthma, sinusitis and breathing disorders through TCM and naturopathy.</p><span class="sdg-tag">Respiratory</span></div>
+      </div>
+    </div>
+
+    <!-- PAIN MANAGEMENT -->
+    <div class="service-section-block" id="pain">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">💊</div>
+        <div><h2>Pain Management & Auto-Immune</h2><p>Targeted pain relief and auto-immune disease management without drugs or surgery</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">💊</div><h3>Chronic Pain Management</h3><p>Comprehensive pain relief programs for chronic back pain, joint pain, fibromyalgia and widespread body pain.</p><span class="sdg-tag">Pain</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🛡️</div><h3>Auto-Immune Disease Care</h3><p>Holistic management of Ankylosing Spondylitis, Fibromyalgia, Sjogren's Syndrome, Parkinson's, MS and more.</p><span class="sdg-tag">Auto-Immune</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">👂</div><h3>Tinnitus Treatment</h3><p>Specialized treatment for tinnitus (ringing in ears) and hearing loss support through acupuncture and neurotherapy.</p><span class="sdg-tag">ENT</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">🔴</div><h3>Blood Pressure Management</h3><p>Natural blood pressure regulation through acupuncture, naturopathy, dietary changes and stress reduction.</p><span class="sdg-tag">Cardiac</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">🩺</div><h3>Diabetes Supportive Care</h3><p>Integrative support for diabetes management including blood sugar regulation, neuropathy and wound healing.</p><span class="sdg-tag">Diabetes</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">💉</div><h3>Pre-Surgery Optimization</h3><p>Lower surgical risk by controlling sugar, BP and inflammation levels before planned surgeries.</p><span class="sdg-tag">Pre-Op</span></div>
+      </div>
+    </div>
+
+    <!-- AVOID SURGERY -->
+    <div class="service-section-block" id="avoid-surgery">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🛡️</div>
+        <div><h2>Avoid Surgery Program</h2><p>Non-surgical alternatives for conditions typically treated with invasive procedures — subject to evaluation</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🦷</div><h3>Avoid Knee Replacement</h3><p>Advanced therapy to reduce joint degeneration, relieve pain and restore mobility without knee replacement surgery.</p><span class="sdg-tag">Avoid Surgery</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🦴</div><h3>Avoid Spine Surgery</h3><p>Holistic treatment for disc herniation, spondylitis and spinal stenosis to avoid surgical intervention.</p><span class="sdg-tag">Avoid Surgery</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">🩸</div><h3>Varicose Veins Care</h3><p>Non-invasive management of varicose veins through naturopathy and advanced therapy. Subject to evaluation.</p><span class="sdg-tag">Vascular</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">👁️</div><h3>Eye & ENT Conditions</h3><p>Supportive holistic care for eye strain, blurred vision, sinus and ENT conditions. Subject to individual evaluation.</p><span class="sdg-tag">ENT / Eye</span></div>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.25rem;background:rgba(201,150,58,0.1);border:1px solid rgba(201,150,58,0.3);border-radius:var(--r-md);">
+        <p style="font-size:0.875rem;color:var(--text-mid);">⚠️ <strong>Important Note:</strong> Our Avoid Surgery program is subject to individual evaluation. We are completely transparent about what we can and cannot achieve. Patient safety and honest assessment always come first.</p>
+      </div>
+    </div>
+
+    <!-- WEIGHT MANAGEMENT -->
+    <div class="service-section-block" id="weight">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">⚖️</div>
+        <div><h2>Weight Management & Lifestyle</h2><p>Sustainable weight loss and metabolic health through holistic approaches</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">⚖️</div><h3>Weight Loss Program</h3><p>Personalized weight loss combining acupuncture, naturopathy, diet planning and lifestyle modification for lasting results.</p><span class="sdg-tag">Weight Loss</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🥗</div><h3>Diet & Nutrition Planning</h3><p>Customized nutritional protocols for weight management, diabetes, thyroid, PCOD and chronic disease support.</p><span class="sdg-tag">Nutrition</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">🌿</div><h3>Gut Health Restoration</h3><p>Treatment for IBS, ulcers, leaky gut, acidity, poor digestion and metabolic disorders using natural therapies.</p><span class="sdg-tag">Gut Health</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">🛡️</div><h3>Immunity Boosting</h3><p>Comprehensive immunity enhancement programs for recurrent infections, low immunity and preventive healthcare.</p><span class="sdg-tag">Immunity</span></div>
+      </div>
+    </div>
+
+    <!-- DIAGNOSIS -->
+    <div class="service-section-block" id="diagnosis">
+      <div class="service-section-header reveal">
+        <div class="service-section-icon">🔬</div>
+        <div><h2>Advanced Diagnostics</h2><p>US FDA-approved equipment for precise, non-invasive root-cause diagnosis</p></div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="sdg-card reveal"><div class="sdg-icon">🔬</div><h3>Biofeedback Diagnosis</h3><p>Real-time physiological monitoring using advanced biofeedback to identify stress, imbalances and health root causes.</p><span class="sdg-tag">Diagnostic</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.1s"><div class="sdg-icon">🩺</div><h3>Nadi Pariksha</h3><p>Traditional Ayurvedic pulse diagnosis to assess all three doshas and identify systemic health imbalances.</p><span class="sdg-tag">Ayurvedic</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.2s"><div class="sdg-icon">💓</div><h3>Pulse Diagnosis</h3><p>Advanced pulse reading techniques for comprehensive assessment of organ health, energy flow and body constitution.</p><span class="sdg-tag">Diagnostic</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.3s"><div class="sdg-icon">🧪</div><h3>BCM / Body Composition Analysis</h3><p>Precise body composition measurement to guide weight management, nutrition and treatment protocols.</p><span class="sdg-tag">Assessment</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.4s"><div class="sdg-icon">⚡</div><h3>ATMA & Aculife Diagnostics</h3><p>US FDA-approved German and Japanese diagnostic machines for in-depth organ-level health assessment.</p><span class="sdg-tag">FDA Approved</span></div>
+        <div class="sdg-card reveal" style="transition-delay:.5s"><div class="sdg-icon">🫀</div><h3>Masic & TENS Assessment</h3><p>Advanced therapeutic assessment and treatment using professional-grade electrotherapy equipment.</p><span class="sdg-tag">Equipment</span></div>
+      </div>
+    </div>
+
+    <!-- HOME VISIT CTA -->
+    <div class="home-visit-section reveal">
+      <h3>🏡 Home Visit Available for All Services</h3>
+      <p>Can't make it to the clinic? Our senior therapists will come to you. Professional treatment at your doorstep in Gurugram and nearby areas.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="appointment.html" class="btn-cta-white">📅 Book Home Visit</a>
+        <a href="https://wa.me/919311642999?text=I%20need%20a%20home%20visit%20appointment" target="_blank" class="btn-cta-outline">💬 WhatsApp for Home Visit</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Not Sure Which Service You Need?</h2>
+    <p>Call us or use our Symptom Checker. Dr. Arpita's team will guide you to the right treatment for your condition.</p>
+    <div class="cta-banner-actions">
+      <a href="appointment.html" class="btn-cta-white">📅 Book Free Consultation</a>
+      <a href="tel:+919311642999" class="btn-cta-outline">📞 +91 93116 42999</a>
+      <a href="index.html#symptom-checker" class="btn-cta-outline">🩺 Symptom Checker</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">BRC <span>Clinic</span></div><p class="footer-desc">35+ advanced holistic therapies in Gurugram. Non-surgical, root-cause healing.</p><div class="footer-social"><a href="https://instagram.com/biophysiotherapy" target="_blank" class="social-icon">📸</a><a href="https://wa.me/919311642999" target="_blank" class="social-icon">💬</a><a href="tel:+919311642999" class="social-icon">📞</a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="conditions.html">Conditions</a></li><li><a href="appointment.html">Book Appointment</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919311642999">📞 +91 93116 42999</a></li><li><a href="mailto:ceo@aarogita.com">✉️ ceo@aarogita.com</a></li><li><a href="contact.html">📍 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms & Conditions</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 BRC Clinic – Pain, Spine & Joint Rehab. All rights reserved. | 342P, Basement, near Medicity, Islampur Village, Sector 38, Gurugram, Haryana 122001</p></div>
+</footer>
+
+<a href="https://wa.me/919311642999" target="_blank" id="whatsapp-btn">💬</a>
+<a href="tel:+919311642999" id="call-btn">📞</a>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<div id="toast"></div>
+<script src="js/main.js"></script>
+<script>
+function scrollTo(id){const el=document.getElementById(id);if(el){const top=el.getBoundingClientRect().top+window.scrollY-130;window.scrollTo({top,behavior:'smooth'});}}
+document.querySelectorAll('.snav-btn').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.snav-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');});});
+</script>
+</body>
+</html>
